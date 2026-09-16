@@ -1,8 +1,11 @@
 {
-    "name": "@assets-pro/typescript-sdk",
+    "name": "@assetspro/typescript-sdk",
     "version": "1.0.0",
     "description": "Server-side TypeScript client for the Assets Pro authenticated API",
     "license": "MIT",
+    "publishConfig": {
+        "access": "public"
+    },
     "files": [
         "dist",
         "src",
