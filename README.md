@@ -19,33 +19,16 @@ Do not expose API tokens in browser applications.
 
 ## Installation
 
-The package is currently local and unpublished.
-
-From the SDK directory:
+Install the package from npm:
 
 ```bash
-cd packages/typescript-sdk
-
-bun install --frozen-lockfile
-bun run build
+npm install @assetspro/typescript-sdk
 ```
 
-Then install it into another project:
+Or with Bun:
 
 ```bash
-bun add /absolute/path/to/assets-pro/packages/typescript-sdk
-```
-
-You can also create a tarball:
-
-```bash
-bun pm pack --destination /absolute/path/to/artifacts
-```
-
-Then install it:
-
-```bash
-bun add /absolute/path/to/artifacts/assets-pro-typescript-sdk-0.1.0.tgz
+bun add @assetspro/typescript-sdk
 ```
 
 The SDK uses ESM.
@@ -71,7 +54,7 @@ ASSETSPRO_ORGANIZATION=your-organization-id
 Create the client:
 
 ```ts
-import { AssetsPro } from '@assets-pro/typescript-sdk';
+import { AssetsPro } from '@assetspro/typescript-sdk';
 
 const sdk = new AssetsPro({
     baseUrl: process.env.ASSETSPRO_BASE_URL!,
@@ -203,7 +186,7 @@ const { data: restored } = await workspace.assets.restore(assetId);
 Create a source from a local file:
 
 ```ts
-import { sourceFromPath } from '@assets-pro/typescript-sdk';
+import { sourceFromPath } from '@assetspro/typescript-sdk';
 
 const source = await sourceFromPath(
     './photo.jpg',
@@ -312,7 +295,7 @@ const source = await sourceFromPath(
 ### Blob
 
 ```ts
-import { sourceFromBlob } from '@assets-pro/typescript-sdk';
+import { sourceFromBlob } from '@assetspro/typescript-sdk';
 
 const source = sourceFromBlob(
     blob,
@@ -341,7 +324,7 @@ Uploads are not blindly retried after ambiguous failures.
 If an upload fails after initialization, inspect its current state first.
 
 ```ts
-import { UploadError } from '@assets-pro/typescript-sdk';
+import { UploadError } from '@assetspro/typescript-sdk';
 
 try {
     await workspace.upload(source);
@@ -851,7 +834,7 @@ import {
     ApiError,
     OperationError,
     UploadError,
-} from '@assets-pro/typescript-sdk';
+} from '@assetspro/typescript-sdk';
 ```
 
 Example:
@@ -934,12 +917,6 @@ bun run typecheck
 bun run test
 
 bun run test:bun
-```
-
-Create a distributable package:
-
-```bash
-bun pm pack --destination /absolute/path/to/artifacts
 ```
 
 Tests cover the public client, typed resources, pagination, uploads, downloads, retries, cancellation, async waits, and Node/Bun runtime behavior.

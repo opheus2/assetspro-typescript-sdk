@@ -1,4 +1,4 @@
-import { AssetsPro, sourceFromPath } from '@assets-pro/typescript-sdk';
+import { AssetsPro, sourceFromPath } from '@assetspro/typescript-sdk';
 
 // Run with Bun: bun examples/usage.ts
 
