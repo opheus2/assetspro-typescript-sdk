@@ -1,0 +1,1512 @@
+{
+  "schema_version": 1,
+  "api_version": "v1",
+  "operations": [
+    {
+      "id": "assets.archive",
+      "name": "api.v1.assets.archive",
+      "method": "POST",
+      "path": "/api/v1/organizations/{organization}/assets/{asset}/archive",
+      "path_parameters": [
+        "organization",
+        "asset"
+      ],
+      "query_parameters": [],
+      "request_body": null
+    },
+    {
+      "id": "assets.bulk",
+      "name": "api.v1.assets.bulk",
+      "method": "POST",
+      "path": "/api/v1/organizations/{organization}/assets/bulk",
+      "path_parameters": [
+        "organization"
+      ],
+      "query_parameters": [],
+      "request_body": {
+        "asset_ids": [
+          "{{asset_id}}"
+        ],
+        "action": "add_tags",
+        "ids": [
+          "{{tag_id}}"
+        ]
+      }
+    },
+    {
+      "id": "assets.destroy",
+      "name": "api.v1.assets.destroy",
+      "method": "DELETE",
+      "path": "/api/v1/organizations/{organization}/assets/{asset}",
+      "path_parameters": [
+        "organization",
+        "asset"
+      ],
+      "query_parameters": [],
+      "request_body": null
+    },
+    {
+      "id": "assets.index",
+      "name": "api.v1.assets.index",
+      "method": "GET",
+      "path": "/api/v1/organizations/{organization}/assets",
+      "path_parameters": [
+        "organization"
+      ],
+      "query_parameters": [
+        {
+          "name": "q",
+          "description": "Search text, maximum 200 characters.",
+          "example": "campaign"
+        },
+        {
+          "name": "brand_id",
+          "description": "Brand ULID, or literal none for assets without a brand.",
+          "example": "{{brand_id}}"
+        },
+        {
+          "name": "brand_role_id",
+          "description": "Brand-role ULID.",
+          "example": "{{brand_role_id}}"
+        },
+        {
+          "name": "category_ids[]",
+          "description": "Repeat this key for multiple IDs, maximum 50.",
+          "example": "{{category_id}}"
+        },
+        {
+          "name": "tag_ids[]",
+          "description": "Repeat this key for multiple IDs, maximum 50.",
+          "example": "{{tag_id}}"
+        },
+        {
+          "name": "collection_ids[]",
+          "description": "Repeat this key for multiple IDs, maximum 50.",
+          "example": "{{collection_id}}"
+        },
+        {
+          "name": "media_type",
+          "description": "image or document.",
+          "example": "image"
+        },
+        {
+          "name": "extension",
+          "description": "Exact active-revision extension, without a dot; maximum 10 characters.",
+          "example": "png"
+        },
+        {
+          "name": "uploaded_by",
+          "description": "Uploader integer user ID, minimum 1.",
+          "example": "{{user_id}}"
+        },
+        {
+          "name": "created_from",
+          "description": "Inclusive YYYY-MM-DD start date.",
+          "example": "2026-01-01"
+        },
+        {
+          "name": "created_to",
+          "description": "Inclusive YYYY-MM-DD end date, on or after created_from.",
+          "example": "2026-12-31"
+        },
+        {
+          "name": "min_width",
+          "description": "Active-revision width lower bound, integer >= 1.",
+          "example": "800"
+        },
+        {
+          "name": "max_width",
+          "description": "Active-revision width upper bound, integer >= 1.",
+          "example": "4000"
+        },
+        {
+          "name": "min_height",
+          "description": "Active-revision height lower bound, integer >= 1.",
+          "example": "600"
+        },
+        {
+          "name": "max_height",
+          "description": "Active-revision height upper bound, integer >= 1.",
+          "example": "4000"
+        },
+        {
+          "name": "status",
+          "description": "processing, ready, or failed.",
+          "example": "ready"
+        },
+        {
+          "name": "sort",
+          "description": "newest (default), oldest, name, or name_desc.",
+          "example": "newest"
+        },
+        {
+          "name": "view",
+          "description": "grid or list; accepted UI preference, does not change the data query.",
+          "example": "grid"
+        },
+        {
+          "name": "archived",
+          "description": "Boolean: select archived assets.",
+          "example": "1"
+        },
+        {
+          "name": "trash",
+          "description": "Boolean: select trashed assets; requires assets.delete.",
+          "example": "1"
+        },
+        {
+          "name": "per_page",
+          "description": "Integer 1–100; default 48.",
+          "example": "48"
+        },
+        {
+          "name": "cursor",
+          "description": "Opaque cursor from the previous response; maximum 2048 characters.",
+          "example": "{{asset_cursor}}"
+        }
+      ],
+      "request_body": null
+    },
+    {
+      "id": "assets.restore",
+      "name": "api.v1.assets.restore",
+      "method": "POST",
+      "path": "/api/v1/organizations/{organization}/assets/{asset}/restore",
+      "path_parameters": [
+        "organization",
+        "asset"
+      ],
+      "query_parameters": [],
+      "request_body": null
+    },
+    {
+      "id": "assets.revisions",
+      "name": "api.v1.assets.revisions",
+      "method": "GET",
+      "path": "/api/v1/organizations/{organization}/assets/{asset}/revisions",
+      "path_parameters": [
+        "organization",
+        "asset"
+      ],
+      "query_parameters": [
+        {
+          "name": "per_page",
+          "description": "Integer 1–100; default 20.",
+          "example": "20"
+        },
+        {
+          "name": "cursor",
+          "description": "Opaque cursor; maximum 2000 characters.",
+          "example": "{{revision_cursor}}"
+        }
+      ],
+      "request_body": null
+    },
+    {
+      "id": "assets.show",
+      "name": "api.v1.assets.show",
+      "method": "GET",
+      "path": "/api/v1/organizations/{organization}/assets/{asset}",
+      "path_parameters": [
+        "organization",
+        "asset"
+      ],
+      "query_parameters": [],
+      "request_body": null
+    },
+    {
+      "id": "assets.update",
+      "name": "api.v1.assets.update",
+      "method": "PATCH",
+      "path": "/api/v1/organizations/{organization}/assets/{asset}",
+      "path_parameters": [
+        "organization",
+        "asset"
+      ],
+      "query_parameters": [],
+      "request_body": {
+        "name": "Campaign asset",
+        "description": "Approved artwork for the campaign.",
+        "alt_text": "Campaign artwork on a plain background.",
+        "metadata": {
+          "usage": "campaign"
+        }
+      }
+    },
+    {
+      "id": "brand-roles.destroy",
+      "name": "api.v1.brand-roles.destroy",
+      "method": "DELETE",
+      "path": "/api/v1/organizations/{organization}/brand-roles/{record}",
+      "path_parameters": [
+        "organization",
+        "record"
+      ],
+      "query_parameters": [],
+      "request_body": null
+    },
+    {
+      "id": "brand-roles.index",
+      "name": "api.v1.brand-roles.index",
+      "method": "GET",
+      "path": "/api/v1/organizations/{organization}/brand-roles",
+      "path_parameters": [
+        "organization"
+      ],
+      "query_parameters": [
+        {
+          "name": "q",
+          "description": "Optional normalized substring search, maximum 200 characters.",
+          "example": "{{taxonomy_search}}"
+        },
+        {
+          "name": "archived",
+          "description": "0: active records (default); 1: archived records only.",
+          "example": "0"
+        },
+        {
+          "name": "per_page",
+          "description": "Page size: integer 1–100.",
+          "example": "30"
+        },
+        {
+          "name": "cursor",
+          "description": "Opaque next_cursor or prev_cursor returned by this same listing; do not construct it. Maximum 2048 characters.",
+          "example": "{{cursor}}"
+        }
+      ],
+      "request_body": null
+    },
+    {
+      "id": "brand-roles.show",
+      "name": "api.v1.brand-roles.show",
+      "method": "GET",
+      "path": "/api/v1/organizations/{organization}/brand-roles/{record}",
+      "path_parameters": [
+        "organization",
+        "record"
+      ],
+      "query_parameters": [],
+      "request_body": null
+    },
+    {
+      "id": "brand-roles.store",
+      "name": "api.v1.brand-roles.store",
+      "method": "POST",
+      "path": "/api/v1/organizations/{organization}/brand-roles",
+      "path_parameters": [
+        "organization"
+      ],
+      "query_parameters": [],
+      "request_body": {
+        "name": "Postman Brand role {{$timestamp}}",
+        "description": "Created from the AssetsPro Postman collection.",
+        "metadata": {
+          "source": "postman"
+        },
+        "archived_at": null
+      }
+    },
+    {
+      "id": "brand-roles.update",
+      "name": "api.v1.brand-roles.update",
+      "method": "PATCH",
+      "path": "/api/v1/organizations/{organization}/brand-roles/{record}",
+      "path_parameters": [
+        "organization",
+        "record"
+      ],
+      "query_parameters": [],
+      "request_body": {
+        "description": "Updated from the AssetsPro Postman collection.",
+        "metadata": {
+          "source": "postman",
+          "reviewed": true
+        },
+        "archived_at": null
+      }
+    },
+    {
+      "id": "brands.destroy",
+      "name": "api.v1.brands.destroy",
+      "method": "DELETE",
+      "path": "/api/v1/organizations/{organization}/brands/{record}",
+      "path_parameters": [
+        "organization",
+        "record"
+      ],
+      "query_parameters": [],
+      "request_body": null
+    },
+    {
+      "id": "brands.index",
+      "name": "api.v1.brands.index",
+      "method": "GET",
+      "path": "/api/v1/organizations/{organization}/brands",
+      "path_parameters": [
+        "organization"
+      ],
+      "query_parameters": [
+        {
+          "name": "q",
+          "description": "Optional normalized substring search, maximum 200 characters.",
+          "example": "{{taxonomy_search}}"
+        },
+        {
+          "name": "archived",
+          "description": "0: active records (default); 1: archived records only.",
+          "example": "0"
+        },
+        {
+          "name": "per_page",
+          "description": "Page size: integer 1–100.",
+          "example": "30"
+        },
+        {
+          "name": "cursor",
+          "description": "Opaque next_cursor or prev_cursor returned by this same listing; do not construct it. Maximum 2048 characters.",
+          "example": "{{cursor}}"
+        }
+      ],
+      "request_body": null
+    },
+    {
+      "id": "brands.show",
+      "name": "api.v1.brands.show",
+      "method": "GET",
+      "path": "/api/v1/organizations/{organization}/brands/{record}",
+      "path_parameters": [
+        "organization",
+        "record"
+      ],
+      "query_parameters": [],
+      "request_body": null
+    },
+    {
+      "id": "brands.store",
+      "name": "api.v1.brands.store",
+      "method": "POST",
+      "path": "/api/v1/organizations/{organization}/brands",
+      "path_parameters": [
+        "organization"
+      ],
+      "query_parameters": [],
+      "request_body": {
+        "name": "Postman Brand {{$timestamp}}",
+        "description": "Created from the AssetsPro Postman collection.",
+        "metadata": {
+          "source": "postman"
+        },
+        "archived_at": null,
+        "website": "https://example.com"
+      }
+    },
+    {
+      "id": "brands.update",
+      "name": "api.v1.brands.update",
+      "method": "PATCH",
+      "path": "/api/v1/organizations/{organization}/brands/{record}",
+      "path_parameters": [
+        "organization",
+        "record"
+      ],
+      "query_parameters": [],
+      "request_body": {
+        "description": "Updated from the AssetsPro Postman collection.",
+        "metadata": {
+          "source": "postman",
+          "reviewed": true
+        },
+        "archived_at": null
+      }
+    },
+    {
+      "id": "categories.destroy",
+      "name": "api.v1.categories.destroy",
+      "method": "DELETE",
+      "path": "/api/v1/organizations/{organization}/categories/{record}",
+      "path_parameters": [
+        "organization",
+        "record"
+      ],
+      "query_parameters": [],
+      "request_body": null
+    },
+    {
+      "id": "categories.index",
+      "name": "api.v1.categories.index",
+      "method": "GET",
+      "path": "/api/v1/organizations/{organization}/categories",
+      "path_parameters": [
+        "organization"
+      ],
+      "query_parameters": [
+        {
+          "name": "q",
+          "description": "Optional normalized substring search, maximum 200 characters.",
+          "example": "{{taxonomy_search}}"
+        },
+        {
+          "name": "archived",
+          "description": "0: active records (default); 1: archived records only.",
+          "example": "0"
+        },
+        {
+          "name": "per_page",
+          "description": "Page size: integer 1–100.",
+          "example": "30"
+        },
+        {
+          "name": "cursor",
+          "description": "Opaque next_cursor or prev_cursor returned by this same listing; do not construct it. Maximum 2048 characters.",
+          "example": "{{cursor}}"
+        }
+      ],
+      "request_body": null
+    },
+    {
+      "id": "categories.show",
+      "name": "api.v1.categories.show",
+      "method": "GET",
+      "path": "/api/v1/organizations/{organization}/categories/{record}",
+      "path_parameters": [
+        "organization",
+        "record"
+      ],
+      "query_parameters": [],
+      "request_body": null
+    },
+    {
+      "id": "categories.store",
+      "name": "api.v1.categories.store",
+      "method": "POST",
+      "path": "/api/v1/organizations/{organization}/categories",
+      "path_parameters": [
+        "organization"
+      ],
+      "query_parameters": [],
+      "request_body": {
+        "name": "Postman Category {{$timestamp}}",
+        "description": "Created from the AssetsPro Postman collection.",
+        "metadata": {
+          "source": "postman"
+        },
+        "archived_at": null
+      }
+    },
+    {
+      "id": "categories.update",
+      "name": "api.v1.categories.update",
+      "method": "PATCH",
+      "path": "/api/v1/organizations/{organization}/categories/{record}",
+      "path_parameters": [
+        "organization",
+        "record"
+      ],
+      "query_parameters": [],
+      "request_body": {
+        "description": "Updated from the AssetsPro Postman collection.",
+        "metadata": {
+          "source": "postman",
+          "reviewed": true
+        },
+        "archived_at": null
+      }
+    },
+    {
+      "id": "collections.bulk",
+      "name": "api.v1.collections.bulk",
+      "method": "POST",
+      "path": "/api/v1/organizations/{organization}/collections/bulk",
+      "path_parameters": [
+        "organization"
+      ],
+      "query_parameters": [],
+      "request_body": {
+        "collection_ids": [
+          "{{collection_id}}"
+        ],
+        "action": "trash",
+        "include_assets": false,
+        "request_id": "{{$guid}}"
+      }
+    },
+    {
+      "id": "collections.destroy",
+      "name": "api.v1.collections.destroy",
+      "method": "DELETE",
+      "path": "/api/v1/organizations/{organization}/collections/{record}",
+      "path_parameters": [
+        "organization",
+        "record"
+      ],
+      "query_parameters": [],
+      "request_body": null
+    },
+    {
+      "id": "collections.index",
+      "name": "api.v1.collections.index",
+      "method": "GET",
+      "path": "/api/v1/organizations/{organization}/collections",
+      "path_parameters": [
+        "organization"
+      ],
+      "query_parameters": [
+        {
+          "name": "q",
+          "description": "Optional normalized substring search, maximum 200 characters.",
+          "example": "{{taxonomy_search}}"
+        },
+        {
+          "name": "archived",
+          "description": "0: active records (default); 1: archived records only.",
+          "example": "0"
+        },
+        {
+          "name": "per_page",
+          "description": "Page size: integer 1–100.",
+          "example": "30"
+        },
+        {
+          "name": "cursor",
+          "description": "Opaque next_cursor or prev_cursor returned by this same listing; do not construct it. Maximum 2048 characters.",
+          "example": "{{cursor}}"
+        },
+        {
+          "name": "trash",
+          "description": "1: list only trashed collections, requiring collections.delete as well as collections.view. Overrides archived filtering. Default 0.",
+          "example": "1"
+        }
+      ],
+      "request_body": null
+    },
+    {
+      "id": "collections.preview",
+      "name": "api.v1.collections.preview",
+      "method": "POST",
+      "path": "/api/v1/organizations/{organization}/collections/preview",
+      "path_parameters": [
+        "organization"
+      ],
+      "query_parameters": [],
+      "request_body": {
+        "collection_ids": [
+          "{{collection_id}}"
+        ],
+        "action": "trash"
+      }
+    },
+    {
+      "id": "collections.resolve",
+      "name": "api.v1.collections.resolve",
+      "method": "POST",
+      "path": "/api/v1/organizations/{organization}/collections/resolve",
+      "path_parameters": [
+        "organization"
+      ],
+      "query_parameters": [],
+      "request_body": {
+        "name": "Campaign imports"
+      }
+    },
+    {
+      "id": "collections.restore",
+      "name": "api.v1.collections.restore",
+      "method": "POST",
+      "path": "/api/v1/organizations/{organization}/collections/{collection}/restore",
+      "path_parameters": [
+        "organization",
+        "collection"
+      ],
+      "query_parameters": [],
+      "request_body": {
+        "include_assets": false,
+        "request_id": "{{$guid}}"
+      }
+    },
+    {
+      "id": "collections.show",
+      "name": "api.v1.collections.show",
+      "method": "GET",
+      "path": "/api/v1/organizations/{organization}/collections/{record}",
+      "path_parameters": [
+        "organization",
+        "record"
+      ],
+      "query_parameters": [],
+      "request_body": null
+    },
+    {
+      "id": "collections.store",
+      "name": "api.v1.collections.store",
+      "method": "POST",
+      "path": "/api/v1/organizations/{organization}/collections",
+      "path_parameters": [
+        "organization"
+      ],
+      "query_parameters": [],
+      "request_body": {
+        "name": "Postman Collection {{$timestamp}}",
+        "description": "Created from the AssetsPro Postman collection.",
+        "metadata": {
+          "source": "postman"
+        },
+        "archived_at": null
+      }
+    },
+    {
+      "id": "collections.trash",
+      "name": "api.v1.collections.trash",
+      "method": "POST",
+      "path": "/api/v1/organizations/{organization}/collections/{collection}/trash",
+      "path_parameters": [
+        "organization",
+        "collection"
+      ],
+      "query_parameters": [],
+      "request_body": {
+        "include_assets": false,
+        "request_id": "{{$guid}}"
+      }
+    },
+    {
+      "id": "collections.update",
+      "name": "api.v1.collections.update",
+      "method": "PATCH",
+      "path": "/api/v1/organizations/{organization}/collections/{record}",
+      "path_parameters": [
+        "organization",
+        "record"
+      ],
+      "query_parameters": [],
+      "request_body": {
+        "description": "Updated from the AssetsPro Postman collection.",
+        "metadata": {
+          "source": "postman",
+          "reviewed": true
+        },
+        "archived_at": null
+      }
+    },
+    {
+      "id": "downloads.show",
+      "name": "api.v1.downloads.show",
+      "method": "GET",
+      "path": "/api/v1/organizations/{organization}/assets/{asset}/download",
+      "path_parameters": [
+        "organization",
+        "asset"
+      ],
+      "query_parameters": [
+        {
+          "name": "revision",
+          "description": "Optional ready revision belonging to this asset; defaults to active revision.",
+          "example": "{{revision_id}}"
+        },
+        {
+          "name": "variant",
+          "description": "Optional processed variant belonging to the selected revision.",
+          "example": "{{variant_id}}"
+        },
+        {
+          "name": "inline",
+          "description": "Boolean. Only permitted preview/original types can be displayed inline.",
+          "example": "1"
+        }
+      ],
+      "request_body": null
+    },
+    {
+      "id": "downloads.svg",
+      "name": "api.v1.downloads.svg",
+      "method": "GET",
+      "path": "/api/v1/organizations/{organization}/assets/{asset}/svg",
+      "path_parameters": [
+        "organization",
+        "asset"
+      ],
+      "query_parameters": [],
+      "request_body": null
+    },
+    {
+      "id": "exports.download",
+      "name": "api.v1.exports.download",
+      "method": "GET",
+      "path": "/api/v1/organizations/{organization}/exports/{export}/download",
+      "path_parameters": [
+        "organization",
+        "export"
+      ],
+      "query_parameters": [],
+      "request_body": null
+    },
+    {
+      "id": "exports.show",
+      "name": "api.v1.exports.show",
+      "method": "GET",
+      "path": "/api/v1/organizations/{organization}/exports/{export}",
+      "path_parameters": [
+        "organization",
+        "export"
+      ],
+      "query_parameters": [],
+      "request_body": null
+    },
+    {
+      "id": "exports.store",
+      "name": "api.v1.exports.store",
+      "method": "POST",
+      "path": "/api/v1/organizations/{organization}/exports",
+      "path_parameters": [
+        "organization"
+      ],
+      "query_parameters": [],
+      "request_body": {
+        "asset_ids": [
+          "{{asset_id}}"
+        ]
+      }
+    },
+    {
+      "id": "invitations.destroy",
+      "name": "api.v1.invitations.destroy",
+      "method": "DELETE",
+      "path": "/api/v1/organizations/{organization}/invitations/{invitation}",
+      "path_parameters": [
+        "organization",
+        "invitation"
+      ],
+      "query_parameters": [],
+      "request_body": null
+    },
+    {
+      "id": "invitations.index",
+      "name": "api.v1.invitations.index",
+      "method": "GET",
+      "path": "/api/v1/organizations/{organization}/invitations",
+      "path_parameters": [
+        "organization"
+      ],
+      "query_parameters": [
+        {
+          "name": "per_page",
+          "description": "Page size: integer 1–100.",
+          "example": "25"
+        },
+        {
+          "name": "cursor",
+          "description": "Opaque next_cursor or prev_cursor returned by this same listing; do not construct it. Maximum 2048 characters.",
+          "example": "{{cursor}}"
+        }
+      ],
+      "request_body": null
+    },
+    {
+      "id": "invitations.store",
+      "name": "api.v1.invitations.store",
+      "method": "POST",
+      "path": "/api/v1/organizations/{organization}/invitations",
+      "path_parameters": [
+        "organization"
+      ],
+      "query_parameters": [],
+      "request_body": {
+        "email": "{{invite_email}}",
+        "role": "Editor"
+      }
+    },
+    {
+      "id": "members.destroy",
+      "name": "api.v1.members.destroy",
+      "method": "DELETE",
+      "path": "/api/v1/organizations/{organization}/members/{member}",
+      "path_parameters": [
+        "organization",
+        "member"
+      ],
+      "query_parameters": [],
+      "request_body": null
+    },
+    {
+      "id": "members.index",
+      "name": "api.v1.members.index",
+      "method": "GET",
+      "path": "/api/v1/organizations/{organization}/members",
+      "path_parameters": [
+        "organization"
+      ],
+      "query_parameters": [
+        {
+          "name": "q",
+          "description": "Optional member name/email search, maximum 100 characters.",
+          "example": "{{member_search}}"
+        },
+        {
+          "name": "per_page",
+          "description": "Page size: integer 1–100.",
+          "example": "50"
+        },
+        {
+          "name": "cursor",
+          "description": "Opaque next_cursor or prev_cursor returned by this same listing; do not construct it. Maximum 2048 characters.",
+          "example": "{{cursor}}"
+        }
+      ],
+      "request_body": null
+    },
+    {
+      "id": "members.update",
+      "name": "api.v1.members.update",
+      "method": "PATCH",
+      "path": "/api/v1/organizations/{organization}/members/{member}",
+      "path_parameters": [
+        "organization",
+        "member"
+      ],
+      "query_parameters": [],
+      "request_body": {
+        "role": "Editor"
+      }
+    },
+    {
+      "id": "organizations.index",
+      "name": "api.v1.organizations.index",
+      "method": "GET",
+      "path": "/api/v1/organizations",
+      "path_parameters": [],
+      "query_parameters": [
+        {
+          "name": "per_page",
+          "description": "Page size: integer 1–100.",
+          "example": "50"
+        },
+        {
+          "name": "cursor",
+          "description": "Opaque next_cursor or prev_cursor returned by this same listing; do not construct it. Maximum 2048 characters.",
+          "example": "{{cursor}}"
+        }
+      ],
+      "request_body": null
+    },
+    {
+      "id": "publications.destroy",
+      "name": "api.v1.publications.destroy",
+      "method": "DELETE",
+      "path": "/api/v1/organizations/{organization}/assets/{asset}/publication",
+      "path_parameters": [
+        "organization",
+        "asset"
+      ],
+      "query_parameters": [],
+      "request_body": null
+    },
+    {
+      "id": "publications.store",
+      "name": "api.v1.publications.store",
+      "method": "POST",
+      "path": "/api/v1/organizations/{organization}/assets/{asset}/publication",
+      "path_parameters": [
+        "organization",
+        "asset"
+      ],
+      "query_parameters": [],
+      "request_body": null
+    },
+    {
+      "id": "share-links.destroy",
+      "name": "api.v1.share-links.destroy",
+      "method": "DELETE",
+      "path": "/api/v1/organizations/{organization}/share-links/{shareLink}",
+      "path_parameters": [
+        "organization",
+        "shareLink"
+      ],
+      "query_parameters": [],
+      "request_body": null
+    },
+    {
+      "id": "share-links.index",
+      "name": "api.v1.share-links.index",
+      "method": "GET",
+      "path": "/api/v1/organizations/{organization}/share-links",
+      "path_parameters": [
+        "organization"
+      ],
+      "query_parameters": [
+        {
+          "name": "asset_id",
+          "description": "Asset target; required unless collection_id is supplied. Do not send both.",
+          "example": "{{asset_id}}"
+        },
+        {
+          "name": "collection_id",
+          "description": "Collection target; disable/remove asset_id before enabling this parameter.",
+          "example": "{{collection_id}}"
+        },
+        {
+          "name": "per_page",
+          "description": "Page size: integer 1–100.",
+          "example": "20"
+        },
+        {
+          "name": "cursor",
+          "description": "Opaque next_cursor or prev_cursor returned by this same listing; do not construct it. Maximum 2000 characters.",
+          "example": "{{cursor}}"
+        }
+      ],
+      "request_body": null
+    },
+    {
+      "id": "share-links.show",
+      "name": "api.v1.share-links.show",
+      "method": "GET",
+      "path": "/api/v1/organizations/{organization}/share-links/{shareLink}",
+      "path_parameters": [
+        "organization",
+        "shareLink"
+      ],
+      "query_parameters": [],
+      "request_body": null
+    },
+    {
+      "id": "share-links.store",
+      "name": "api.v1.share-links.store",
+      "method": "POST",
+      "path": "/api/v1/organizations/{organization}/share-links",
+      "path_parameters": [
+        "organization"
+      ],
+      "query_parameters": [],
+      "request_body": {
+        "name": "Postman review",
+        "asset_id": "{{asset_id}}",
+        "allow_downloads": false,
+        "expires_at": null,
+        "password_action": "keep"
+      }
+    },
+    {
+      "id": "share-links.update",
+      "name": "api.v1.share-links.update",
+      "method": "PATCH",
+      "path": "/api/v1/organizations/{organization}/share-links/{shareLink}",
+      "path_parameters": [
+        "organization",
+        "shareLink"
+      ],
+      "query_parameters": [],
+      "request_body": {
+        "name": "Updated Postman review",
+        "allow_downloads": false,
+        "expires_at": null,
+        "password_action": "keep"
+      }
+    },
+    {
+      "id": "storage-connections.activate",
+      "name": "api.v1.storage-connections.activate",
+      "method": "POST",
+      "path": "/api/v1/organizations/{organization}/storage-connections/{connection}/activate",
+      "path_parameters": [
+        "organization",
+        "connection"
+      ],
+      "query_parameters": [],
+      "request_body": null
+    },
+    {
+      "id": "storage-connections.index",
+      "name": "api.v1.storage-connections.index",
+      "method": "GET",
+      "path": "/api/v1/organizations/{organization}/storage-connections",
+      "path_parameters": [
+        "organization"
+      ],
+      "query_parameters": [
+        {
+          "name": "page",
+          "description": "Numbered page; this endpoint does not use cursor pagination.",
+          "example": "1"
+        }
+      ],
+      "request_body": null
+    },
+    {
+      "id": "storage-connections.retire",
+      "name": "api.v1.storage-connections.retire",
+      "method": "POST",
+      "path": "/api/v1/organizations/{organization}/storage-connections/{connection}/retire",
+      "path_parameters": [
+        "organization",
+        "connection"
+      ],
+      "query_parameters": [],
+      "request_body": null
+    },
+    {
+      "id": "storage-connections.rotate",
+      "name": "api.v1.storage-connections.rotate",
+      "method": "POST",
+      "path": "/api/v1/organizations/{organization}/storage-connections/{connection}/rotate",
+      "path_parameters": [
+        "organization",
+        "connection"
+      ],
+      "query_parameters": [],
+      "request_body": {
+        "credentials": {
+          "key": "{{replacement_storage_access_key_id}}",
+          "secret": "{{replacement_storage_secret_access_key}}"
+        }
+      }
+    },
+    {
+      "id": "storage-connections.store",
+      "name": "api.v1.storage-connections.store",
+      "method": "POST",
+      "path": "/api/v1/organizations/{organization}/storage-connections",
+      "path_parameters": [
+        "organization"
+      ],
+      "query_parameters": [],
+      "request_body": {
+        "name": "Postman R2",
+        "provider": "r2",
+        "endpoint": "https://{{r2_account_id}}.r2.cloudflarestorage.com",
+        "region": "auto",
+        "private_bucket": "{{private_bucket}}",
+        "publication_bucket": null,
+        "cdn_url": null,
+        "default_public_url": null,
+        "use_path_style_endpoint": false,
+        "credentials": {
+          "key": "{{storage_access_key_id}}",
+          "secret": "{{storage_secret_access_key}}"
+        }
+      }
+    },
+    {
+      "id": "storage-connections.verify",
+      "name": "api.v1.storage-connections.verify",
+      "method": "POST",
+      "path": "/api/v1/organizations/{organization}/storage-connections/{connection}/verify",
+      "path_parameters": [
+        "organization",
+        "connection"
+      ],
+      "query_parameters": [],
+      "request_body": null
+    },
+    {
+      "id": "storage-files.download",
+      "name": "api.v1.storage-files.download",
+      "method": "GET",
+      "path": "/api/v1/organizations/{organization}/storage-connections/{connection}/files/download",
+      "path_parameters": [
+        "organization",
+        "connection"
+      ],
+      "query_parameters": [
+        {
+          "name": "bucket",
+          "description": "Configured bucket selector: private (default) or publication. Never pass an arbitrary bucket name.",
+          "example": "private"
+        },
+        {
+          "name": "key",
+          "description": "Exact key returned by the file browser, maximum 1024 characters.",
+          "example": "{{storage_object_key}}"
+        }
+      ],
+      "request_body": null
+    },
+    {
+      "id": "storage-files.index",
+      "name": "api.v1.storage-files.index",
+      "method": "GET",
+      "path": "/api/v1/organizations/{organization}/storage-connections/{connection}/files",
+      "path_parameters": [
+        "organization",
+        "connection"
+      ],
+      "query_parameters": [
+        {
+          "name": "bucket",
+          "description": "Configured bucket selector: private (default) or publication. Never pass an arbitrary bucket name.",
+          "example": "private"
+        },
+        {
+          "name": "prefix",
+          "description": "Object prefix/folder to browse, maximum 1024 characters. Empty browses the root.",
+          "example": ""
+        },
+        {
+          "name": "cursor",
+          "description": "Use data.next_cursor from this same folder listing; maximum 2000 characters, expires after 15 minutes.",
+          "example": "{{storage_files_cursor}}"
+        }
+      ],
+      "request_body": null
+    },
+    {
+      "id": "storage-files.show",
+      "name": "api.v1.storage-files.show",
+      "method": "GET",
+      "path": "/api/v1/organizations/{organization}/storage-connections/{connection}/files/metadata",
+      "path_parameters": [
+        "organization",
+        "connection"
+      ],
+      "query_parameters": [
+        {
+          "name": "bucket",
+          "description": "Configured bucket selector: private (default) or publication. Never pass an arbitrary bucket name.",
+          "example": "private"
+        },
+        {
+          "name": "key",
+          "description": "Exact key returned by the file browser, including any prefix; maximum 1024 characters.",
+          "example": "{{storage_object_key}}"
+        }
+      ],
+      "request_body": null
+    },
+    {
+      "id": "tags.destroy",
+      "name": "api.v1.tags.destroy",
+      "method": "DELETE",
+      "path": "/api/v1/organizations/{organization}/tags/{record}",
+      "path_parameters": [
+        "organization",
+        "record"
+      ],
+      "query_parameters": [],
+      "request_body": null
+    },
+    {
+      "id": "tags.index",
+      "name": "api.v1.tags.index",
+      "method": "GET",
+      "path": "/api/v1/organizations/{organization}/tags",
+      "path_parameters": [
+        "organization"
+      ],
+      "query_parameters": [
+        {
+          "name": "q",
+          "description": "Optional normalized substring search, maximum 200 characters.",
+          "example": "{{taxonomy_search}}"
+        },
+        {
+          "name": "archived",
+          "description": "0: active records (default); 1: archived records only.",
+          "example": "0"
+        },
+        {
+          "name": "per_page",
+          "description": "Page size: integer 1–100.",
+          "example": "30"
+        },
+        {
+          "name": "cursor",
+          "description": "Opaque next_cursor or prev_cursor returned by this same listing; do not construct it. Maximum 2048 characters.",
+          "example": "{{cursor}}"
+        }
+      ],
+      "request_body": null
+    },
+    {
+      "id": "tags.show",
+      "name": "api.v1.tags.show",
+      "method": "GET",
+      "path": "/api/v1/organizations/{organization}/tags/{record}",
+      "path_parameters": [
+        "organization",
+        "record"
+      ],
+      "query_parameters": [],
+      "request_body": null
+    },
+    {
+      "id": "tags.store",
+      "name": "api.v1.tags.store",
+      "method": "POST",
+      "path": "/api/v1/organizations/{organization}/tags",
+      "path_parameters": [
+        "organization"
+      ],
+      "query_parameters": [],
+      "request_body": {
+        "name": "Postman Tag {{$timestamp}}",
+        "description": "Created from the AssetsPro Postman collection.",
+        "metadata": {
+          "source": "postman"
+        },
+        "archived_at": null
+      }
+    },
+    {
+      "id": "tags.update",
+      "name": "api.v1.tags.update",
+      "method": "PATCH",
+      "path": "/api/v1/organizations/{organization}/tags/{record}",
+      "path_parameters": [
+        "organization",
+        "record"
+      ],
+      "query_parameters": [],
+      "request_body": {
+        "description": "Updated from the AssetsPro Postman collection.",
+        "metadata": {
+          "source": "postman",
+          "reviewed": true
+        },
+        "archived_at": null
+      }
+    },
+    {
+      "id": "tokens.destroy",
+      "name": "api.v1.tokens.destroy",
+      "method": "DELETE",
+      "path": "/api/v1/organizations/{organization}/tokens/{token}",
+      "path_parameters": [
+        "organization",
+        "token"
+      ],
+      "query_parameters": [],
+      "request_body": null
+    },
+    {
+      "id": "tokens.index",
+      "name": "api.v1.tokens.index",
+      "method": "GET",
+      "path": "/api/v1/organizations/{organization}/tokens",
+      "path_parameters": [
+        "organization"
+      ],
+      "query_parameters": [
+        {
+          "name": "per_page",
+          "description": "Page size: integer 1–100.",
+          "example": "50"
+        },
+        {
+          "name": "cursor",
+          "description": "Opaque next_cursor or prev_cursor returned by this same listing; do not construct it. Maximum 2048 characters.",
+          "example": "{{cursor}}"
+        }
+      ],
+      "request_body": null
+    },
+    {
+      "id": "tokens.store",
+      "name": "api.v1.tokens.store",
+      "method": "POST",
+      "path": "/api/v1/organizations/{organization}/tokens",
+      "path_parameters": [
+        "organization"
+      ],
+      "query_parameters": [],
+      "request_body": {
+        "name": "Postman read-only",
+        "abilities": [
+          "assets.view",
+          "assets.download"
+        ],
+        "ip_whitelist": []
+      }
+    },
+    {
+      "id": "tokens.update",
+      "name": "api.v1.tokens.update",
+      "method": "PATCH",
+      "path": "/api/v1/organizations/{organization}/tokens/{token}",
+      "path_parameters": [
+        "organization",
+        "token"
+      ],
+      "query_parameters": [],
+      "request_body": {
+        "ip_whitelist": []
+      }
+    },
+    {
+      "id": "trash-operations.index",
+      "name": "api.v1.trash-operations.index",
+      "method": "GET",
+      "path": "/api/v1/organizations/{organization}/trash-operations",
+      "path_parameters": [
+        "organization"
+      ],
+      "query_parameters": [
+        {
+          "name": "per_page",
+          "description": "Integer 1–100; default 20.",
+          "example": "20"
+        },
+        {
+          "name": "cursor",
+          "description": "Opaque cursor, maximum 2000 characters.",
+          "example": "{{trash_operation_cursor}}"
+        }
+      ],
+      "request_body": null
+    },
+    {
+      "id": "trash-operations.retry",
+      "name": "api.v1.trash-operations.retry",
+      "method": "POST",
+      "path": "/api/v1/organizations/{organization}/trash-operations/{operation}/retry",
+      "path_parameters": [
+        "organization",
+        "operation"
+      ],
+      "query_parameters": [],
+      "request_body": null
+    },
+    {
+      "id": "trash-operations.show",
+      "name": "api.v1.trash-operations.show",
+      "method": "GET",
+      "path": "/api/v1/organizations/{organization}/trash-operations/{operation}",
+      "path_parameters": [
+        "organization",
+        "operation"
+      ],
+      "query_parameters": [],
+      "request_body": null
+    },
+    {
+      "id": "uploaders.index",
+      "name": "api.v1.uploaders.index",
+      "method": "GET",
+      "path": "/api/v1/organizations/{organization}/uploaders",
+      "path_parameters": [
+        "organization"
+      ],
+      "query_parameters": [
+        {
+          "name": "q",
+          "description": "Optional name search, at most 100 characters.",
+          "example": "{{uploader_search}}"
+        },
+        {
+          "name": "per_page",
+          "description": "Page size: integer 1–100.",
+          "example": "25"
+        },
+        {
+          "name": "cursor",
+          "description": "Opaque next_cursor or prev_cursor returned by this same listing; do not construct it. Maximum 2048 characters.",
+          "example": "{{cursor}}"
+        }
+      ],
+      "request_body": null
+    },
+    {
+      "id": "uploads.complete",
+      "name": "api.v1.uploads.complete",
+      "method": "POST",
+      "path": "/api/v1/organizations/{organization}/uploads/{upload}/complete",
+      "path_parameters": [
+        "organization",
+        "upload"
+      ],
+      "query_parameters": [],
+      "request_body": null
+    },
+    {
+      "id": "uploads.destroy",
+      "name": "api.v1.uploads.destroy",
+      "method": "DELETE",
+      "path": "/api/v1/organizations/{organization}/uploads/{upload}",
+      "path_parameters": [
+        "organization",
+        "upload"
+      ],
+      "query_parameters": [],
+      "request_body": null
+    },
+    {
+      "id": "uploads.index",
+      "name": "api.v1.uploads.index",
+      "method": "GET",
+      "path": "/api/v1/organizations/{organization}/uploads",
+      "path_parameters": [
+        "organization"
+      ],
+      "query_parameters": [
+        {
+          "name": "cursor",
+          "description": "Opaque cursor from the previous response.",
+          "example": "{{upload_cursor}}"
+        }
+      ],
+      "request_body": null
+    },
+    {
+      "id": "uploads.retry",
+      "name": "api.v1.uploads.retry",
+      "method": "POST",
+      "path": "/api/v1/organizations/{organization}/uploads/{upload}/retry",
+      "path_parameters": [
+        "organization",
+        "upload"
+      ],
+      "query_parameters": [],
+      "request_body": null
+    },
+    {
+      "id": "uploads.show",
+      "name": "api.v1.uploads.show",
+      "method": "GET",
+      "path": "/api/v1/organizations/{organization}/uploads/{upload}",
+      "path_parameters": [
+        "organization",
+        "upload"
+      ],
+      "query_parameters": [],
+      "request_body": null
+    },
+    {
+      "id": "uploads.status",
+      "name": "api.v1.uploads.status",
+      "method": "POST",
+      "path": "/api/v1/organizations/{organization}/uploads/status",
+      "path_parameters": [
+        "organization"
+      ],
+      "query_parameters": [],
+      "request_body": {
+        "ids": [
+          "{{upload_id}}"
+        ]
+      }
+    },
+    {
+      "id": "uploads.store",
+      "name": "api.v1.uploads.store",
+      "method": "POST",
+      "path": "/api/v1/organizations/{organization}/uploads",
+      "path_parameters": [
+        "organization"
+      ],
+      "query_parameters": [],
+      "request_body": {
+        "original_filename": "sample.txt",
+        "mime_type": "text/plain",
+        "file_size": 12,
+        "name": "Sample document",
+        "description": "Uploaded with Postman",
+        "alt_text": null,
+        "target_asset_id": null,
+        "publish_after_processing": false,
+        "brand_id": null,
+        "brand_role_id": null,
+        "category_ids": [],
+        "tag_ids": [],
+        "collection_ids": []
+      }
+    }
+  ]
+}

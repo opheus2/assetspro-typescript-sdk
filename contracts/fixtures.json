@@ -1,0 +1,1226 @@
+{
+  "schema_version": 1,
+  "fixtures": {
+    "asset_public": {
+      "data": {
+        "id": "01J00000000000000000000002",
+        "name": "Example photo",
+        "description": null,
+        "alt_text": null,
+        "status": "ready",
+        "metadata": [],
+        "archived_at": null,
+        "deleted_at": null,
+        "lifecycle_version": 1,
+        "purge_started_at": null,
+        "purge_eligible_at": null,
+        "restore_available": false,
+        "created_at": "2026-01-01T00:00:00.000000Z",
+        "updated_at": "2026-01-01T00:00:00.000000Z",
+        "brand": null,
+        "brand_role": null,
+        "categories": [],
+        "tags": [],
+        "collections": [],
+        "uploaded_by": {
+          "id": 42,
+          "name": "Example member"
+        },
+        "active_revision": {
+          "id": "01J00000000000000000000003",
+          "original_filename": "photo.jpg",
+          "extension": "jpg",
+          "mime_type": "image/jpeg",
+          "media_type": "image",
+          "file_size": 23456,
+          "width": 800,
+          "height": 600,
+          "aspect_ratio": 1.333333333333,
+          "dominant_color": "#aabbcc",
+          "checksum": "0000000000000000000000000000000000000000000000000000000000000000",
+          "metadata": [],
+          "status": "ready",
+          "failure_code": null,
+          "error_message": null,
+          "created_at": "2026-01-01T00:00:00.000000Z",
+          "download_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/download?revision=01J00000000000000000000003",
+          "variants": [
+            {
+              "id": "01J00000000000000000000005",
+              "type": "preview",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 600,
+              "file_size": 12345,
+              "metadata": [],
+              "download_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/download?revision=01J00000000000000000000003&variant=01J00000000000000000000005"
+            }
+          ]
+        },
+        "pending_revision": null,
+        "revisions_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/revisions",
+        "thumbnail_url": null,
+        "preview_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/download?revision=01J00000000000000000000003&variant=01J00000000000000000000005&inline=1",
+        "download_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/download",
+        "publication_url": "https://cdn.example.test/published/photo.jpg",
+        "publication_urls": {
+          "custom_url": "https://cdn.example.test/published/photo.jpg",
+          "default_url": "https://provider.example.test/published/photo.jpg"
+        },
+        "publications": [
+          {
+            "id": "01J00000000000000000000007",
+            "asset_revision_id": "01J00000000000000000000003",
+            "created_at": "2026-01-01T00:00:00.000000Z",
+            "status": "published",
+            "published_at": "2026-01-01T00:00:00.000000Z",
+            "cache_expires_at": null,
+            "error_message": null
+          }
+        ]
+      }
+    },
+    "asset_private": {
+      "data": {
+        "id": "01J00000000000000000000002",
+        "name": "Example photo",
+        "description": null,
+        "alt_text": null,
+        "status": "ready",
+        "metadata": [],
+        "archived_at": null,
+        "deleted_at": null,
+        "lifecycle_version": 1,
+        "purge_started_at": null,
+        "purge_eligible_at": null,
+        "restore_available": false,
+        "created_at": "2026-01-01T00:00:00.000000Z",
+        "updated_at": "2026-01-01T00:00:00.000000Z",
+        "brand": null,
+        "brand_role": null,
+        "categories": [],
+        "tags": [],
+        "collections": [],
+        "uploaded_by": {
+          "id": 42,
+          "name": "Example member"
+        },
+        "active_revision": {
+          "id": "01J00000000000000000000003",
+          "original_filename": "photo.jpg",
+          "extension": "jpg",
+          "mime_type": "image/jpeg",
+          "media_type": "image",
+          "file_size": 23456,
+          "width": 800,
+          "height": 600,
+          "aspect_ratio": 1.333333333333,
+          "dominant_color": "#aabbcc",
+          "checksum": "0000000000000000000000000000000000000000000000000000000000000000",
+          "metadata": [],
+          "status": "ready",
+          "failure_code": null,
+          "error_message": null,
+          "created_at": "2026-01-01T00:00:00.000000Z",
+          "download_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/download?revision=01J00000000000000000000003",
+          "variants": [
+            {
+              "id": "01J00000000000000000000005",
+              "type": "preview",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 600,
+              "file_size": 12345,
+              "metadata": [],
+              "download_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/download?revision=01J00000000000000000000003&variant=01J00000000000000000000005"
+            }
+          ]
+        },
+        "pending_revision": null,
+        "revisions_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/revisions",
+        "thumbnail_url": null,
+        "preview_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/download?revision=01J00000000000000000000003&variant=01J00000000000000000000005&inline=1",
+        "download_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/download",
+        "publication_url": null,
+        "publication_urls": {
+          "custom_url": null,
+          "default_url": null
+        },
+        "publications": []
+      }
+    },
+    "asset_provider_only": {
+      "data": {
+        "id": "01J00000000000000000000002",
+        "name": "Example photo",
+        "description": null,
+        "alt_text": null,
+        "status": "ready",
+        "metadata": [],
+        "archived_at": null,
+        "deleted_at": null,
+        "lifecycle_version": 1,
+        "purge_started_at": null,
+        "purge_eligible_at": null,
+        "restore_available": false,
+        "created_at": "2026-01-01T00:00:00.000000Z",
+        "updated_at": "2026-01-01T00:00:00.000000Z",
+        "brand": null,
+        "brand_role": null,
+        "categories": [],
+        "tags": [],
+        "collections": [],
+        "uploaded_by": {
+          "id": 42,
+          "name": "Example member"
+        },
+        "active_revision": {
+          "id": "01J00000000000000000000003",
+          "original_filename": "photo.jpg",
+          "extension": "jpg",
+          "mime_type": "image/jpeg",
+          "media_type": "image",
+          "file_size": 23456,
+          "width": 800,
+          "height": 600,
+          "aspect_ratio": 1.333333333333,
+          "dominant_color": "#aabbcc",
+          "checksum": "0000000000000000000000000000000000000000000000000000000000000000",
+          "metadata": [],
+          "status": "ready",
+          "failure_code": null,
+          "error_message": null,
+          "created_at": "2026-01-01T00:00:00.000000Z",
+          "download_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/download?revision=01J00000000000000000000003",
+          "variants": [
+            {
+              "id": "01J00000000000000000000005",
+              "type": "preview",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 600,
+              "file_size": 12345,
+              "metadata": [],
+              "download_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/download?revision=01J00000000000000000000003&variant=01J00000000000000000000005"
+            }
+          ]
+        },
+        "pending_revision": null,
+        "revisions_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/revisions",
+        "thumbnail_url": null,
+        "preview_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/download?revision=01J00000000000000000000003&variant=01J00000000000000000000005&inline=1",
+        "download_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/download",
+        "publication_url": null,
+        "publication_urls": {
+          "custom_url": null,
+          "default_url": "https://provider.example.test/published/photo.jpg"
+        },
+        "publications": [
+          {
+            "id": "01J00000000000000000000007",
+            "asset_revision_id": "01J00000000000000000000003",
+            "created_at": "2026-01-01T00:00:00.000000Z",
+            "status": "published",
+            "published_at": "2026-01-01T00:00:00.000000Z",
+            "cache_expires_at": null,
+            "error_message": null
+          }
+        ]
+      }
+    },
+    "asset_custom_only": {
+      "data": {
+        "id": "01J00000000000000000000002",
+        "name": "Example photo",
+        "description": null,
+        "alt_text": null,
+        "status": "ready",
+        "metadata": [],
+        "archived_at": null,
+        "deleted_at": null,
+        "lifecycle_version": 1,
+        "purge_started_at": null,
+        "purge_eligible_at": null,
+        "restore_available": false,
+        "created_at": "2026-01-01T00:00:00.000000Z",
+        "updated_at": "2026-01-01T00:00:00.000000Z",
+        "brand": null,
+        "brand_role": null,
+        "categories": [],
+        "tags": [],
+        "collections": [],
+        "uploaded_by": {
+          "id": 42,
+          "name": "Example member"
+        },
+        "active_revision": {
+          "id": "01J00000000000000000000003",
+          "original_filename": "photo.jpg",
+          "extension": "jpg",
+          "mime_type": "image/jpeg",
+          "media_type": "image",
+          "file_size": 23456,
+          "width": 800,
+          "height": 600,
+          "aspect_ratio": 1.333333333333,
+          "dominant_color": "#aabbcc",
+          "checksum": "0000000000000000000000000000000000000000000000000000000000000000",
+          "metadata": [],
+          "status": "ready",
+          "failure_code": null,
+          "error_message": null,
+          "created_at": "2026-01-01T00:00:00.000000Z",
+          "download_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/download?revision=01J00000000000000000000003",
+          "variants": [
+            {
+              "id": "01J00000000000000000000005",
+              "type": "preview",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 600,
+              "file_size": 12345,
+              "metadata": [],
+              "download_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/download?revision=01J00000000000000000000003&variant=01J00000000000000000000005"
+            }
+          ]
+        },
+        "pending_revision": null,
+        "revisions_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/revisions",
+        "thumbnail_url": null,
+        "preview_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/download?revision=01J00000000000000000000003&variant=01J00000000000000000000005&inline=1",
+        "download_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/download",
+        "publication_url": "https://cdn.example.test/published/photo.jpg",
+        "publication_urls": {
+          "custom_url": "https://cdn.example.test/published/photo.jpg",
+          "default_url": null
+        },
+        "publications": [
+          {
+            "id": "01J00000000000000000000007",
+            "asset_revision_id": "01J00000000000000000000003",
+            "created_at": "2026-01-01T00:00:00.000000Z",
+            "status": "published",
+            "published_at": "2026-01-01T00:00:00.000000Z",
+            "cache_expires_at": null,
+            "error_message": null
+          }
+        ]
+      }
+    },
+    "asset_heic": {
+      "data": {
+        "id": "01J00000000000000000000002",
+        "name": "Example photo",
+        "description": null,
+        "alt_text": null,
+        "status": "ready",
+        "metadata": [],
+        "archived_at": null,
+        "deleted_at": null,
+        "lifecycle_version": 1,
+        "purge_started_at": null,
+        "purge_eligible_at": null,
+        "restore_available": false,
+        "created_at": "2026-01-01T00:00:00.000000Z",
+        "updated_at": "2026-01-01T00:00:00.000000Z",
+        "brand": null,
+        "brand_role": null,
+        "categories": [],
+        "tags": [],
+        "collections": [],
+        "uploaded_by": {
+          "id": 42,
+          "name": "Example member"
+        },
+        "active_revision": {
+          "id": "01J00000000000000000000003",
+          "original_filename": "photo.heic",
+          "extension": "heic",
+          "mime_type": "image/heic",
+          "media_type": "image",
+          "file_size": 23456,
+          "width": 800,
+          "height": 600,
+          "aspect_ratio": 1.333333333333,
+          "dominant_color": "#aabbcc",
+          "checksum": "0000000000000000000000000000000000000000000000000000000000000000",
+          "metadata": [],
+          "status": "ready",
+          "failure_code": null,
+          "error_message": null,
+          "created_at": "2026-01-01T00:00:00.000000Z",
+          "download_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/download?revision=01J00000000000000000000003",
+          "variants": [
+            {
+              "id": "01J00000000000000000000005",
+              "type": "preview",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 600,
+              "file_size": 12345,
+              "metadata": [],
+              "download_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/download?revision=01J00000000000000000000003&variant=01J00000000000000000000005"
+            }
+          ]
+        },
+        "pending_revision": null,
+        "revisions_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/revisions",
+        "thumbnail_url": null,
+        "preview_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/download?revision=01J00000000000000000000003&variant=01J00000000000000000000005&inline=1",
+        "download_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/download",
+        "publication_url": "https://cdn.example.test/published/photo.webp",
+        "publication_urls": {
+          "custom_url": "https://cdn.example.test/published/photo.webp",
+          "default_url": "https://provider.example.test/published/photo.webp"
+        },
+        "publications": [
+          {
+            "id": "01J00000000000000000000007",
+            "asset_revision_id": "01J00000000000000000000003",
+            "created_at": "2026-01-01T00:00:00.000000Z",
+            "status": "published",
+            "published_at": "2026-01-01T00:00:00.000000Z",
+            "cache_expires_at": null,
+            "error_message": null
+          }
+        ]
+      }
+    },
+    "asset_svg": {
+      "data": {
+        "id": "01J00000000000000000000002",
+        "name": "Example photo",
+        "description": null,
+        "alt_text": null,
+        "status": "ready",
+        "metadata": [],
+        "archived_at": null,
+        "deleted_at": null,
+        "lifecycle_version": 1,
+        "purge_started_at": null,
+        "purge_eligible_at": null,
+        "restore_available": false,
+        "created_at": "2026-01-01T00:00:00.000000Z",
+        "updated_at": "2026-01-01T00:00:00.000000Z",
+        "brand": null,
+        "brand_role": null,
+        "categories": [],
+        "tags": [],
+        "collections": [],
+        "uploaded_by": {
+          "id": 42,
+          "name": "Example member"
+        },
+        "active_revision": {
+          "id": "01J00000000000000000000003",
+          "original_filename": "photo.svg",
+          "extension": "svg",
+          "mime_type": "image/svg+xml",
+          "media_type": "image",
+          "file_size": 23456,
+          "width": 800,
+          "height": 600,
+          "aspect_ratio": 1.333333333333,
+          "dominant_color": "#aabbcc",
+          "checksum": "0000000000000000000000000000000000000000000000000000000000000000",
+          "metadata": [],
+          "status": "ready",
+          "failure_code": null,
+          "error_message": null,
+          "created_at": "2026-01-01T00:00:00.000000Z",
+          "download_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/download?revision=01J00000000000000000000003",
+          "variants": [
+            {
+              "id": "01J00000000000000000000005",
+              "type": "preview",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 600,
+              "file_size": 12345,
+              "metadata": [],
+              "download_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/download?revision=01J00000000000000000000003&variant=01J00000000000000000000005"
+            }
+          ]
+        },
+        "pending_revision": null,
+        "revisions_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/revisions",
+        "thumbnail_url": null,
+        "preview_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/download?revision=01J00000000000000000000003&variant=01J00000000000000000000005&inline=1",
+        "download_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/download",
+        "publication_url": "https://cdn.example.test/published/sanitized.svg",
+        "publication_urls": {
+          "custom_url": "https://cdn.example.test/published/sanitized.svg",
+          "default_url": "https://provider.example.test/published/sanitized.svg"
+        },
+        "publications": [
+          {
+            "id": "01J00000000000000000000007",
+            "asset_revision_id": "01J00000000000000000000003",
+            "created_at": "2026-01-01T00:00:00.000000Z",
+            "status": "published",
+            "published_at": "2026-01-01T00:00:00.000000Z",
+            "cache_expires_at": null,
+            "error_message": null
+          }
+        ]
+      }
+    },
+    "asset_archived": {
+      "data": {
+        "id": "01J00000000000000000000002",
+        "name": "Example photo",
+        "description": null,
+        "alt_text": null,
+        "status": "ready",
+        "metadata": [],
+        "archived_at": "2026-01-01T00:00:00.000000Z",
+        "deleted_at": null,
+        "lifecycle_version": 1,
+        "purge_started_at": null,
+        "purge_eligible_at": null,
+        "restore_available": false,
+        "created_at": "2026-01-01T00:00:00.000000Z",
+        "updated_at": "2026-01-01T00:00:00.000000Z",
+        "brand": null,
+        "brand_role": null,
+        "categories": [],
+        "tags": [],
+        "collections": [],
+        "uploaded_by": {
+          "id": 42,
+          "name": "Example member"
+        },
+        "active_revision": {
+          "id": "01J00000000000000000000003",
+          "original_filename": "photo.jpg",
+          "extension": "jpg",
+          "mime_type": "image/jpeg",
+          "media_type": "image",
+          "file_size": 23456,
+          "width": 800,
+          "height": 600,
+          "aspect_ratio": 1.333333333333,
+          "dominant_color": "#aabbcc",
+          "checksum": "0000000000000000000000000000000000000000000000000000000000000000",
+          "metadata": [],
+          "status": "ready",
+          "failure_code": null,
+          "error_message": null,
+          "created_at": "2026-01-01T00:00:00.000000Z",
+          "download_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/download?revision=01J00000000000000000000003",
+          "variants": [
+            {
+              "id": "01J00000000000000000000005",
+              "type": "preview",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 600,
+              "file_size": 12345,
+              "metadata": [],
+              "download_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/download?revision=01J00000000000000000000003&variant=01J00000000000000000000005"
+            }
+          ]
+        },
+        "pending_revision": null,
+        "revisions_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/revisions",
+        "thumbnail_url": null,
+        "preview_url": null,
+        "download_url": null,
+        "publication_url": null,
+        "publication_urls": {
+          "custom_url": null,
+          "default_url": null
+        },
+        "publications": []
+      }
+    },
+    "asset_processing": {
+      "data": {
+        "id": "01J00000000000000000000002",
+        "name": "Example photo",
+        "description": null,
+        "alt_text": null,
+        "status": "processing",
+        "metadata": [],
+        "archived_at": null,
+        "deleted_at": null,
+        "lifecycle_version": 1,
+        "purge_started_at": null,
+        "purge_eligible_at": null,
+        "restore_available": false,
+        "created_at": "2026-01-01T00:00:00.000000Z",
+        "updated_at": "2026-01-01T00:00:00.000000Z",
+        "brand": null,
+        "brand_role": null,
+        "categories": [],
+        "tags": [],
+        "collections": [],
+        "uploaded_by": {
+          "id": 42,
+          "name": "Example member"
+        },
+        "active_revision": null,
+        "pending_revision": null,
+        "revisions_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/revisions",
+        "thumbnail_url": null,
+        "preview_url": null,
+        "download_url": null,
+        "publication_url": null,
+        "publication_urls": {
+          "custom_url": null,
+          "default_url": null
+        },
+        "publications": []
+      }
+    },
+    "asset_pending_replacement": {
+      "data": {
+        "id": "01J00000000000000000000002",
+        "name": "Example photo",
+        "description": null,
+        "alt_text": null,
+        "status": "ready",
+        "metadata": [],
+        "archived_at": null,
+        "deleted_at": null,
+        "lifecycle_version": 1,
+        "purge_started_at": null,
+        "purge_eligible_at": null,
+        "restore_available": false,
+        "created_at": "2026-01-01T00:00:00.000000Z",
+        "updated_at": "2026-01-01T00:00:00.000000Z",
+        "brand": null,
+        "brand_role": null,
+        "categories": [],
+        "tags": [],
+        "collections": [],
+        "uploaded_by": {
+          "id": 42,
+          "name": "Example member"
+        },
+        "active_revision": {
+          "id": "01J00000000000000000000003",
+          "original_filename": "photo.jpg",
+          "extension": "jpg",
+          "mime_type": "image/jpeg",
+          "media_type": "image",
+          "file_size": 23456,
+          "width": 800,
+          "height": 600,
+          "aspect_ratio": 1.333333333333,
+          "dominant_color": "#aabbcc",
+          "checksum": "0000000000000000000000000000000000000000000000000000000000000000",
+          "metadata": [],
+          "status": "ready",
+          "failure_code": null,
+          "error_message": null,
+          "created_at": "2026-01-01T00:00:00.000000Z",
+          "download_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/download?revision=01J00000000000000000000003",
+          "variants": [
+            {
+              "id": "01J00000000000000000000005",
+              "type": "preview",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 600,
+              "file_size": 12345,
+              "metadata": [],
+              "download_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/download?revision=01J00000000000000000000003&variant=01J00000000000000000000005"
+            }
+          ]
+        },
+        "pending_revision": {
+          "id": "01J00000000000000000000008",
+          "original_filename": "photo.jpg",
+          "extension": "jpg",
+          "mime_type": "image/jpeg",
+          "media_type": "image",
+          "file_size": 23456,
+          "width": 800,
+          "height": 600,
+          "aspect_ratio": 1.333333333333,
+          "dominant_color": "#aabbcc",
+          "checksum": "0000000000000000000000000000000000000000000000000000000000000000",
+          "metadata": [],
+          "status": "processing",
+          "failure_code": null,
+          "error_message": null,
+          "created_at": "2026-01-01T00:00:00.000000Z",
+          "download_url": null,
+          "variants": []
+        },
+        "revisions_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/revisions",
+        "thumbnail_url": null,
+        "preview_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/download?revision=01J00000000000000000000003&variant=01J00000000000000000000005&inline=1",
+        "download_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/download",
+        "publication_url": "https://cdn.example.test/published/photo.jpg",
+        "publication_urls": {
+          "custom_url": "https://cdn.example.test/published/photo.jpg",
+          "default_url": "https://provider.example.test/published/photo.jpg"
+        },
+        "publications": [
+          {
+            "id": "01J00000000000000000000007",
+            "asset_revision_id": "01J00000000000000000000003",
+            "created_at": "2026-01-01T00:00:00.000000Z",
+            "status": "published",
+            "published_at": "2026-01-01T00:00:00.000000Z",
+            "cache_expires_at": null,
+            "error_message": null
+          }
+        ]
+      }
+    },
+    "asset_sparse": {
+      "data": {
+        "id": "01J00000000000000000000002",
+        "name": "Example photo",
+        "description": null,
+        "alt_text": null,
+        "status": "ready",
+        "metadata": [],
+        "archived_at": null,
+        "deleted_at": null,
+        "lifecycle_version": 1,
+        "purge_started_at": null,
+        "purge_eligible_at": null,
+        "restore_available": false,
+        "created_at": "2026-01-01T00:00:00.000000Z",
+        "updated_at": "2026-01-01T00:00:00.000000Z",
+        "active_revision": {
+          "id": "01J00000000000000000000003",
+          "original_filename": "photo.jpg",
+          "extension": "jpg",
+          "mime_type": "image/jpeg",
+          "media_type": "image",
+          "file_size": 23456,
+          "width": 800,
+          "height": 600,
+          "aspect_ratio": 1.333333333333,
+          "dominant_color": "#aabbcc",
+          "checksum": "0000000000000000000000000000000000000000000000000000000000000000",
+          "metadata": [],
+          "status": "ready",
+          "failure_code": null,
+          "error_message": null,
+          "created_at": "2026-01-01T00:00:00.000000Z",
+          "download_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/download?revision=01J00000000000000000000003",
+          "variants": [
+            {
+              "id": "01J00000000000000000000005",
+              "type": "preview",
+              "mime_type": "image/webp",
+              "width": 800,
+              "height": 600,
+              "file_size": 12345,
+              "metadata": [],
+              "download_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/download?revision=01J00000000000000000000003&variant=01J00000000000000000000005"
+            }
+          ]
+        },
+        "revisions_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/revisions",
+        "thumbnail_url": null,
+        "preview_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/download?revision=01J00000000000000000000003&variant=01J00000000000000000000005&inline=1",
+        "download_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/download",
+        "publication_url": "https://cdn.example.test/published/photo.jpg",
+        "publication_urls": {
+          "custom_url": "https://cdn.example.test/published/photo.jpg",
+          "default_url": "https://provider.example.test/published/photo.jpg"
+        }
+      }
+    },
+    "upload_initialized": {
+      "data": {
+        "id": "01J00000000000000000000004",
+        "organization_id": "01J00000000000000000000001",
+        "status": "uploading",
+        "original_filename": "photo.jpg",
+        "file_size": 23456,
+        "mime_type": "image/jpeg",
+        "asset_id": null,
+        "asset_revision_id": null,
+        "publish_after_processing": false,
+        "publication_status": null,
+        "publication_error": null,
+        "processing_status": null,
+        "failure_code": null,
+        "error_message": null,
+        "expires_at": "2026-01-01T01:00:00.000000Z",
+        "created_at": "2026-01-01T00:00:00.000000Z"
+      },
+      "authorization": {
+        "url": "https://storage.example.test/private/uploads/example/staging?X-Amz-Signature=example",
+        "method": "PUT",
+        "headers": {
+          "Content-Type": "image/jpeg",
+          "Cache-Control": "private, no-store"
+        }
+      }
+    },
+    "upload_completed": {
+      "data": {
+        "id": "01J00000000000000000000004",
+        "organization_id": "01J00000000000000000000001",
+        "status": "completed",
+        "original_filename": "photo.jpg",
+        "file_size": 23456,
+        "mime_type": "image/jpeg",
+        "asset_id": "01J00000000000000000000002",
+        "asset_revision_id": "01J00000000000000000000003",
+        "publish_after_processing": false,
+        "publication_status": null,
+        "publication_error": null,
+        "processing_status": "processing",
+        "failure_code": null,
+        "error_message": null,
+        "expires_at": "2026-01-01T01:00:00.000000Z",
+        "created_at": "2026-01-01T00:00:00.000000Z"
+      }
+    },
+    "upload_ready": {
+      "data": {
+        "id": "01J00000000000000000000004",
+        "organization_id": "01J00000000000000000000001",
+        "status": "completed",
+        "original_filename": "photo.jpg",
+        "file_size": 23456,
+        "mime_type": "image/jpeg",
+        "asset_id": "01J00000000000000000000002",
+        "asset_revision_id": "01J00000000000000000000003",
+        "publish_after_processing": false,
+        "publication_status": null,
+        "publication_error": null,
+        "processing_status": "ready",
+        "failure_code": null,
+        "error_message": null,
+        "expires_at": "2026-01-01T01:00:00.000000Z",
+        "created_at": "2026-01-01T00:00:00.000000Z"
+      }
+    },
+    "upload_publishing": {
+      "data": {
+        "id": "01J00000000000000000000004",
+        "organization_id": "01J00000000000000000000001",
+        "status": "completed",
+        "original_filename": "photo.jpg",
+        "file_size": 23456,
+        "mime_type": "image/jpeg",
+        "asset_id": "01J00000000000000000000002",
+        "asset_revision_id": "01J00000000000000000000003",
+        "publish_after_processing": true,
+        "publication_status": "publishing",
+        "publication_error": null,
+        "processing_status": "ready",
+        "failure_code": null,
+        "error_message": null,
+        "expires_at": "2026-01-01T01:00:00.000000Z",
+        "created_at": "2026-01-01T00:00:00.000000Z"
+      }
+    },
+    "upload_published": {
+      "data": {
+        "id": "01J00000000000000000000004",
+        "organization_id": "01J00000000000000000000001",
+        "status": "completed",
+        "original_filename": "photo.jpg",
+        "file_size": 23456,
+        "mime_type": "image/jpeg",
+        "asset_id": "01J00000000000000000000002",
+        "asset_revision_id": "01J00000000000000000000003",
+        "publish_after_processing": true,
+        "publication_status": "published",
+        "publication_error": null,
+        "processing_status": "ready",
+        "failure_code": null,
+        "error_message": null,
+        "expires_at": "2026-01-01T01:00:00.000000Z",
+        "created_at": "2026-01-01T00:00:00.000000Z"
+      }
+    },
+    "upload_processing_failed": {
+      "data": {
+        "id": "01J00000000000000000000004",
+        "organization_id": "01J00000000000000000000001",
+        "status": "completed",
+        "original_filename": "photo.jpg",
+        "file_size": 23456,
+        "mime_type": "image/jpeg",
+        "asset_id": "01J00000000000000000000002",
+        "asset_revision_id": "01J00000000000000000000003",
+        "publish_after_processing": false,
+        "publication_status": null,
+        "publication_error": null,
+        "processing_status": "failed",
+        "failure_code": "unsupported_content",
+        "error_message": "The content cannot be processed.",
+        "expires_at": "2026-01-01T01:00:00.000000Z",
+        "created_at": "2026-01-01T00:00:00.000000Z"
+      }
+    },
+    "upload_publication_failed": {
+      "data": {
+        "id": "01J00000000000000000000004",
+        "organization_id": "01J00000000000000000000001",
+        "status": "completed",
+        "original_filename": "photo.jpg",
+        "file_size": 23456,
+        "mime_type": "image/jpeg",
+        "asset_id": "01J00000000000000000000002",
+        "asset_revision_id": "01J00000000000000000000003",
+        "publish_after_processing": true,
+        "publication_status": "failed",
+        "publication_error": "Publication could not be completed.",
+        "processing_status": "ready",
+        "failure_code": null,
+        "error_message": null,
+        "expires_at": "2026-01-01T01:00:00.000000Z",
+        "created_at": "2026-01-01T00:00:00.000000Z"
+      }
+    },
+    "upload_retry_processing": {
+      "data": {
+        "id": "01J00000000000000000000004",
+        "organization_id": "01J00000000000000000000001",
+        "status": "completed",
+        "original_filename": "photo.jpg",
+        "file_size": 23456,
+        "mime_type": "image/jpeg",
+        "asset_id": "01J00000000000000000000002",
+        "asset_revision_id": "01J00000000000000000000003",
+        "publish_after_processing": false,
+        "publication_status": null,
+        "publication_error": null,
+        "processing_status": "processing",
+        "failure_code": null,
+        "error_message": null,
+        "expires_at": "2026-01-01T01:00:00.000000Z",
+        "created_at": "2026-01-01T00:00:00.000000Z"
+      }
+    },
+    "upload_retry_transfer": {
+      "data": {
+        "id": "01J00000000000000000000009",
+        "organization_id": "01J00000000000000000000001",
+        "status": "uploading",
+        "original_filename": "photo.jpg",
+        "file_size": 23456,
+        "mime_type": "image/jpeg",
+        "asset_id": null,
+        "asset_revision_id": null,
+        "publish_after_processing": false,
+        "publication_status": null,
+        "publication_error": null,
+        "processing_status": null,
+        "failure_code": null,
+        "error_message": null,
+        "expires_at": "2026-01-01T01:00:00.000000Z",
+        "created_at": "2026-01-01T00:00:00.000000Z"
+      },
+      "authorization": {
+        "url": "https://storage.example.test/private/uploads/example/staging?X-Amz-Signature=example",
+        "method": "PUT",
+        "headers": {
+          "Content-Type": "image/jpeg",
+          "Cache-Control": "private, no-store"
+        }
+      }
+    },
+    "upload_status_partial": {
+      "data": [
+        {
+          "id": "01J00000000000000000000004",
+          "organization_id": "01J00000000000000000000001",
+          "status": "completed",
+          "original_filename": "photo.jpg",
+          "file_size": 23456,
+          "mime_type": "image/jpeg",
+          "asset_id": "01J00000000000000000000002",
+          "asset_revision_id": "01J00000000000000000000003",
+          "publish_after_processing": false,
+          "publication_status": null,
+          "publication_error": null,
+          "processing_status": "ready",
+          "failure_code": null,
+          "error_message": null,
+          "expires_at": "2026-01-01T01:00:00.000000Z",
+          "created_at": "2026-01-01T00:00:00.000000Z"
+        }
+      ],
+      "missing_ids": [
+        "01J00000000000000000000010"
+      ]
+    },
+    "resource_cursor_page": {
+      "data": [
+        {
+          "id": "01J00000000000000000000002",
+          "name": "Example photo",
+          "description": null,
+          "alt_text": null,
+          "status": "ready",
+          "metadata": [],
+          "archived_at": null,
+          "deleted_at": null,
+          "lifecycle_version": 1,
+          "purge_started_at": null,
+          "purge_eligible_at": null,
+          "restore_available": false,
+          "created_at": "2026-01-01T00:00:00.000000Z",
+          "updated_at": "2026-01-01T00:00:00.000000Z",
+          "brand": null,
+          "brand_role": null,
+          "categories": [],
+          "tags": [],
+          "collections": [],
+          "uploaded_by": {
+            "id": 42,
+            "name": "Example member"
+          },
+          "active_revision": {
+            "id": "01J00000000000000000000003",
+            "original_filename": "photo.jpg",
+            "extension": "jpg",
+            "mime_type": "image/jpeg",
+            "media_type": "image",
+            "file_size": 23456,
+            "width": 800,
+            "height": 600,
+            "aspect_ratio": 1.333333333333,
+            "dominant_color": "#aabbcc",
+            "checksum": "0000000000000000000000000000000000000000000000000000000000000000",
+            "metadata": [],
+            "status": "ready",
+            "failure_code": null,
+            "error_message": null,
+            "created_at": "2026-01-01T00:00:00.000000Z",
+            "download_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/download?revision=01J00000000000000000000003",
+            "variants": [
+              {
+                "id": "01J00000000000000000000005",
+                "type": "preview",
+                "mime_type": "image/webp",
+                "width": 800,
+                "height": 600,
+                "file_size": 12345,
+                "metadata": [],
+                "download_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/download?revision=01J00000000000000000000003&variant=01J00000000000000000000005"
+              }
+            ]
+          },
+          "pending_revision": null,
+          "revisions_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/revisions",
+          "thumbnail_url": null,
+          "preview_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/download?revision=01J00000000000000000000003&variant=01J00000000000000000000005&inline=1",
+          "download_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets/01J00000000000000000000002/download",
+          "publication_url": "https://cdn.example.test/published/photo.jpg",
+          "publication_urls": {
+            "custom_url": "https://cdn.example.test/published/photo.jpg",
+            "default_url": "https://provider.example.test/published/photo.jpg"
+          },
+          "publications": [
+            {
+              "id": "01J00000000000000000000007",
+              "asset_revision_id": "01J00000000000000000000003",
+              "created_at": "2026-01-01T00:00:00.000000Z",
+              "status": "published",
+              "published_at": "2026-01-01T00:00:00.000000Z",
+              "cache_expires_at": null,
+              "error_message": null
+            }
+          ]
+        }
+      ],
+      "links": {
+        "first": null,
+        "last": null,
+        "prev": null,
+        "next": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets?cursor=cursor-next"
+      },
+      "meta": {
+        "path": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets",
+        "per_page": 1,
+        "next_cursor": "cursor-next",
+        "prev_cursor": null
+      }
+    },
+    "resource_cursor_last_page": {
+      "data": [],
+      "links": {
+        "first": null,
+        "last": null,
+        "prev": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets?cursor=cursor-prev",
+        "next": null
+      },
+      "meta": {
+        "path": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/assets",
+        "per_page": 1,
+        "next_cursor": null,
+        "prev_cursor": "cursor-prev"
+      }
+    },
+    "flat_cursor_page": {
+      "data": [
+        {
+          "id": "01J00000000000000000000001",
+          "name": "Example organization",
+          "slug": "example",
+          "role": "Owner",
+          "storage_ready": true,
+          "publication_ready": true
+        }
+      ],
+      "next_cursor": "cursor-next",
+      "prev_cursor": null,
+      "next_page_url": "https://api.example.test/api/v1/organizations?cursor=cursor-next",
+      "prev_page_url": null
+    },
+    "flat_cursor_last_page": {
+      "data": [],
+      "next_cursor": null,
+      "prev_cursor": null,
+      "next_page_url": null,
+      "prev_page_url": null
+    },
+    "members_page": {
+      "data": [
+        {
+          "id": 42,
+          "name": "Example member",
+          "email": "member@example.test",
+          "role": "Editor"
+        }
+      ],
+      "next_cursor": null,
+      "prev_cursor": null,
+      "next_page_url": null,
+      "prev_page_url": null,
+      "roles": [
+        "Owner",
+        "Manager",
+        "Editor",
+        "Viewer"
+      ],
+      "invitations": [],
+      "invitations_pagination": {
+        "next_cursor": null,
+        "prev_cursor": null,
+        "next_page_url": null,
+        "prev_page_url": null
+      }
+    },
+    "offset_page": {
+      "data": [],
+      "current_page": 1,
+      "last_page": 2,
+      "per_page": 25,
+      "total": 26,
+      "next_page_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/storage-connections?page=2",
+      "prev_page_url": null
+    },
+    "offset_last_page": {
+      "data": [],
+      "current_page": 2,
+      "last_page": 2,
+      "per_page": 25,
+      "total": 26,
+      "next_page_url": null,
+      "prev_page_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/storage-connections?page=1"
+    },
+    "storage_retired": {
+      "data": null,
+      "deleted": true
+    },
+    "collection": {
+      "data": {
+        "id": "01J00000000000000000000006",
+        "name": "Example collection",
+        "slug": "example-collection",
+        "description": null,
+        "metadata": [],
+        "archived_at": null,
+        "assets_count": 2,
+        "deleted_at": null,
+        "purge_eligible_at": null,
+        "restore_available": false,
+        "can_restore": false,
+        "active_operation_id": null,
+        "trash_operation_id": null,
+        "last_activity_at": "2026-01-01T00:00:00.000000Z"
+      }
+    },
+    "collection_resolved": {
+      "data": {
+        "id": "01J00000000000000000000006",
+        "name": "Example collection",
+        "slug": "example-collection",
+        "description": null,
+        "metadata": [],
+        "archived_at": null,
+        "assets_count": 2,
+        "deleted_at": null,
+        "purge_eligible_at": null,
+        "restore_available": false,
+        "can_restore": false,
+        "active_operation_id": null,
+        "trash_operation_id": null,
+        "last_activity_at": "2026-01-01T00:00:00.000000Z"
+      },
+      "created": false
+    },
+    "message": {
+      "message": "Asset archived."
+    },
+    "error_unauthenticated": {
+      "message": "Unauthenticated."
+    },
+    "error_forbidden": {
+      "message": "This action is unauthorized."
+    },
+    "error_not_found": {
+      "message": "Not Found"
+    },
+    "error_validation": {
+      "message": "The name field is required.",
+      "errors": {
+        "name": [
+          "The name field is required."
+        ]
+      }
+    },
+    "error_rate_limited": {
+      "message": "Too Many Attempts."
+    },
+    "error_conflict": {
+      "message": "The collection is unavailable.",
+      "code": "collection_unavailable"
+    },
+    "error_nested_code": {
+      "error": {
+        "code": "storage_unavailable",
+        "message": "Storage is unavailable."
+      }
+    },
+    "export_queued": {
+      "data": {
+        "id": "01J00000000000000000000011",
+        "status": "queued",
+        "file_size": null,
+        "expires_at": null,
+        "failure_code": null,
+        "error_message": null,
+        "download_url": null
+      }
+    },
+    "export_ready": {
+      "data": {
+        "id": "01J00000000000000000000011",
+        "status": "ready",
+        "file_size": 123456,
+        "expires_at": "2026-01-02T00:00:00.000000Z",
+        "failure_code": null,
+        "error_message": null,
+        "download_url": "https://api.example.test/api/v1/organizations/01J00000000000000000000001/exports/01J00000000000000000000011/download"
+      }
+    }
+  }
+}
