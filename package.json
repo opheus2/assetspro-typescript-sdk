@@ -1,6 +1,6 @@
 {
     "name": "@assetspro/typescript-sdk",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Server-side TypeScript client for the Assets Pro authenticated API",
     "license": "MIT",
     "publishConfig": {
